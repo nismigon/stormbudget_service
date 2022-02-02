@@ -1,0 +1,20 @@
+{
+    "title" : "Configuration",
+    "description": "Configuration object",
+    "type" : "object",
+    "properties": {
+        "address" : {
+            "description" : "Web server listening address",
+            "type" : "string"
+        },
+        "port" : {
+            "description" : "Web server listening port",
+            "type" : "integer"
+        },
+        "database" : {
+            "description" : "Web server database file",
+            "type" : "string"
+        }
+    },
+    "required": ["address", "port", "database"]
+}

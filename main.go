@@ -1,7 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+
+	"stormlab.fr/stormbudget/v1/server/configuration"
+)
 
 func main() {
-	fmt.Println("Hello World !")
+	_, err := configuration.ParseConfiguration("configuration.json")
+	if err != nil {
+		log.Fatal(err.Error())
+	} else {
+		fmt.Println("Pass")
+	}
 }
